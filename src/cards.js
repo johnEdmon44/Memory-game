@@ -1,31 +1,31 @@
 export const cards = [{
     id: 1,
-    img: "",
+    img: "./src/images/Hecarim",
     clicked: false,
     name: "Hecarim"
 },{
     id: 2,
-    img: "",
+    img: "./src/images/Jhin",
     clicked: false,
     name: "Jhin"
 },{
     id: 3,
-    img: "",
+    img: "./src/images/Akali",
     clicked: false,
     name: "Akali"
 },{
     id: 4,
-    img: "",
+    img: "./src/images/Yasuo",
     clicked: false,
     name: "Yasuo"
 },{
     id: 5,
-    img: "",
+    img: "./src/images/Ahri",
     clicked: false,
     name: "Ahri"
 },{
     id: 6,
-    img: "",
+    img: "./src/images/Jinx",
     clicked: false,
     name: "Jinx"
 }, ]
