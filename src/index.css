@@ -1,0 +1,33 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+@font-face {
+    font-family: "League Gothic";
+    src: url("path/to/League_Gothic.otf") format("opentype");
+}
+
+
+body {
+    font-family: "League Gothic", sans-serif;
+    background-color: rgb(7, 26, 56);
+}
+
+
+
+.header {
+    background-color:rgb(11, 39, 82);;
+}
+
+
+
+.header h2 {
+    color: rgb(144, 144, 32);
+    padding: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
