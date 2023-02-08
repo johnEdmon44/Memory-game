@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <Cards card={card}/>
+      <Cards card={card} setCard={setCard} />
     </>
   );
 }
