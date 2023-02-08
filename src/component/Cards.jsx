@@ -3,6 +3,7 @@ import React from "react";
 
 export default function Cards({ card, setCard }) {
     const [score, setScore] = React.useState(0)
+    const [game, setGameOver] = React.useState(false)
 
     const handleClick = (id) => {
         setCard(card.map(c => {
@@ -10,6 +11,7 @@ export default function Cards({ card, setCard }) {
                     setScore(prevState => prevState + 1)
                     return { ...c, clicked: true }
                 } else {
+                    setGameOver(true)
                 }
                 return c
             })
