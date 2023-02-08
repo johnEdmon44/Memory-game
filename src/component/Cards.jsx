@@ -1,13 +1,12 @@
 import React from "react";
-import { cards } from "../cards";
 
 
-export default function Cards() {
+export default function Cards({card}) {
     return (
         <div className="container">
-            {cards.map((card) => (
+            {card.map((c) => (
                 <div className="card">
-                    <img src={card.img}></img>
+                    <img src={c.img}></img>
                 </div>
             ))}
         </div>

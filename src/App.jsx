@@ -2,14 +2,15 @@ import { useState } from 'react'
 import Header from './component/Header'
 import './App.css'
 import Cards from './component/Cards'
+import { cards } from './cards'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [card, setCard] = useState(cards)
 
   return (
     <>
       <Header />
-      <Cards/>
+      <Cards card={card}/>
     </>
   );
 }
