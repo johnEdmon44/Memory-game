@@ -6,13 +6,15 @@ export default function Cards({ card, setCard }) {
 
     const handleClick = (id) => {
         setCard(card.map(c => {
-            if (c.id === id && !c.clicked) {
-                setScore(prevState => prevState + 1)
-                return { ...c, clicked: true }
-            } else {
-            }
-            return c
-        }))
+                if (c.id === id && !c.clicked) {
+                    setScore(prevState => prevState + 1)
+                    return { ...c, clicked: true }
+                } else {
+                }
+                return c
+            })
+        .sort(() => Math.random() - 0.5)
+        )
     }
 
 
