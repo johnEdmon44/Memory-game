@@ -18,7 +18,7 @@ export default function Game() {
                 }
                 return c
             })
-        .sort(() => Math.random() - 0.5)
+            .sort((a, b) => a.clicked === b.clicked ? 0 : a.clicked ? 1 : -1)
         )
     }
 
