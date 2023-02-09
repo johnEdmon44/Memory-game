@@ -1,9 +1,12 @@
 import React from "react";
+import { cards } from "../cards";
 
 
-export default function Cards({ card, setCard }) {
+export default function Game() {
+    const [card, setCard] = React.useState(cards)
     const [score, setScore] = React.useState(0)
-    const [game, setGameOver] = React.useState(false)
+    const [gameOver, setGameOver] = React.useState(false)
+    
 
     const handleClick = (id) => {
         setCard(card.map(c => {

@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import React from 'react'
 import Header from './component/Header'
 import './App.css'
-import Cards from './component/Cards'
-import { cards } from './cards'
+import Game from './component/Game'
+
+
 
 function App() {
-  const [card, setCard] = useState(cards)
+
 
   return (
     <>
       <Header />
-      <Cards card={card} setCard={setCard} />
+      <Game />
     </>
   );
 }
