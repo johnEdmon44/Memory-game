@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 *,*::before,*::after {
     margin: 0;
     padding: 0;
@@ -6,15 +8,8 @@
 
 
 
-
-@font-face {
-    font-family: "League Gothic";
-    src: url("path/to/League_Gothic.otf") format("opentype");
-}
-
-
 body {
-    font-family: "League Gothic", sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: rgb(7, 26, 56);
 }
 
