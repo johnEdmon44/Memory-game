@@ -23,6 +23,12 @@ export default function Game() {
     }
 
 
+    const handleReset = () => {
+        setGameOver(false)
+        setCard(cards.map(c => ({...c, clicked: false})))
+    }
+
+
     React.useEffect(() => {
         console.log(card);
     }, [card]);
@@ -31,11 +37,22 @@ export default function Game() {
 
     return (
         <div>
-            <h1>Score: {score}</h1>
+            <h1 style={{ textAlign: "center",  color: "yellow", marginTop: "2%"}}>Score: {score}</h1>
+
+
+            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+                <h1 style={{ fontSize: "3.5rem", color: "yellow" }}>Game Over</h1>
+                <button onClick={handleReset}>Reset</button>
+            </div>
+
+
             <div className="container">
                 {card.map((c, index) => (
-                    <div className="card" key={index} onClick={() => handleClick(c.id)}>
-                        <img src={c.img}></img>
+                    <div className="card" key={index}>
+                        {gameOver ? 
+                            <img src={c.img} /> 
+                            : <img src={c.img} onClick={() => handleClick(c.id)} />
+                        }
                     </div>
                 ))}
             </div>
