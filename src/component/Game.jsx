@@ -23,6 +23,7 @@ export default function Game() {
 
 
     const handleReset = () => {
+        setScore(0)
         setGameOver(false)
         setCard(cards.map(c => ({...c, clicked: false})))
     }
