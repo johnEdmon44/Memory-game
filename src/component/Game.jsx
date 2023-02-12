@@ -13,12 +13,11 @@ export default function Game() {
                 if (c.id === id && !c.clicked) {
                     setScore(prevState => prevState + 1)
                     return { ...c, clicked: true }
-                } else {
+                } else if (c.id === id && c.clicked) {
                     setGameOver(true)
                 }
                 return c
-            })
-            .sort((a, b) => a.clicked === b.clicked ? 0 : a.clicked ? 1 : -1)
+            }).sort((a, b) => a.clicked === b.clicked ? 0 : a.clicked ? 1 : -1)
         )
     }
 
@@ -31,7 +30,8 @@ export default function Game() {
 
     React.useEffect(() => {
         console.log(card);
-    }, [card]);
+        console.log(gameOver)
+    }, [card, gameOver]);
 
 
 
