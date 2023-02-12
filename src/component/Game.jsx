@@ -40,10 +40,12 @@ export default function Game() {
             <h1 style={{ textAlign: "center",  color: "yellow", marginTop: "2%"}}>Score: {score}</h1>
 
 
-            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
-                <h1 style={{ fontSize: "3.5rem", color: "yellow" }}>Game Over</h1>
-                <button onClick={handleReset}>Reset</button>
-            </div>
+            {gameOver ? (
+                <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+                    <h1 style={{ fontSize: "3.5rem", color: "red" }}>Game Over</h1>
+                    <button onClick={handleReset}>Reset</button>
+                </div>
+            ) : null}
 
 
             <div className="container">
